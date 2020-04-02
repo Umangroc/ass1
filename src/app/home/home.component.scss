@@ -1,0 +1,325 @@
+// Prevent Overflow from whole code
+.over{
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  }
+
+// Header Line Placement
+.header{//Left Side of Header
+  display: inline-flex;
+  justify-content: left;
+  padding-left: 60px;
+}
+
+@media (max-width: 699px){
+  .header{
+    display: block;
+    text-align: center;
+    padding-left: 0px;
+  }
+}
+
+@media (min-width: 700px) and (max-width:991px){
+  .header{
+    padding-left: 0px;
+    justify-content: center;
+  }
+}
+
+.icon{//Right Side of Header
+  display: inline-flex;
+  place-content: flex-end;
+  padding-right: 50px;
+}
+
+@media (max-width: 991px){
+  .icon{
+    place-content: center;
+    padding-right: 0px;
+  }
+}
+
+.frontvl{//Left Vertical line of Header Left
+  border-left: 1px solid;
+  height: 50px;
+  opacity: 0.5;;
+}
+
+.backvl{//Right Vertical line of Header Left
+  border-right: 1px solid;
+  height: 50px;
+  opacity: 0.5;;
+}
+
+@media (max-width: 699px){
+  .frontvl, .backvl{
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-width: thin;
+  }
+}
+
+.vl {//Vertical line of Header Right
+  border-left: 1px solid;
+  height: 50px;
+  opacity: 0.5;;
+}
+
+// Nav Item Placement
+.navlist{
+  place-content: flex-end;
+  font-size: 20px;
+}
+
+@media (max-width: 991px){
+  .navlist{
+    place-content: center;
+  }
+}
+
+// Hero Component
+.content {//Box with content
+  position: absolute; /* Position the background text */
+  bottom: 25%; /* At the bottom. Use top:0 to append it to the top */
+  left: 2%;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 96%; /* Full width */
+  max-width: 400px;
+}
+
+.title {//Upper Box Darkness
+  background-color: rgba(0,0,0,0.5);
+}
+
+// Cost of Renovation
+.centre {
+  text-align: center;
+}
+
+@media (min-width: 768px){
+  .centre {
+    text-align: left;
+}
+}
+
+// Explore and Button
+.explore{
+  justify-content: center;
+  display:flex;
+  padding: 20px;
+  align-items: center;
+  
+  h4{
+    padding-right: 15px;
+  }
+
+  button{
+    margin-left: 50px;
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 768px){
+  .explore{
+    display:block;
+    text-align: center;
+
+    h4{
+      padding-right: 0px;
+    }
+  
+    button{
+      margin-left: 0px;
+      margin-top: 20px;
+      }
+  }
+}
+
+// About Us
+.aboutImg{
+  height: 470px;
+  width: 80%;
+}
+
+@media (max-width: 425px){
+  .aboutImg{
+    height: 300px;
+  }
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  height: 500px;
+}
+
+@media (max-width: 768px){
+  .slideshow-container {
+    height: 250px;
+}
+}
+
+// Slideshow Image for Mobile
+.slideImg{
+width: 100%;
+}
+
+@media (max-width: 425px){
+  .slideImg {
+    height: 250px;
+}
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: table-cell;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+// Unknown
+.subtitle{
+  font-size: 16px;
+}
+
+@media (max-width:768px){
+  .subtitle{
+    font-size: 8px;
+  }
+}
+
+
+// We work with
+.dotImg{
+  padding: 15px 15px;
+  width: 225px;
+  height: 150px;
+}
+
+.dot {/* The dots/bullets/indicators */
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {//Hover dot
+  background-color: #fcba03;
+}
+
+// Slideshow
+.carouse{
+  display: inline-flex;
+}
+
+.slid {/* Dark Background*/
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+.text{ //Inside Text Content
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 15%;
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  font-size: 22px;
+}
+
+@media (max-width:768px){
+    .text{
+      font-size: 10px;
+    }
+}
+
+.slideLine{//Divider Line between Text
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+  
+  @media (max-width:768px){
+    .slideLine{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      }
+  }
+
+// Footer Second Part
+.footer{//   Bullet Point
+
+  ul {
+    list-style: none;
+  }
+  
+  ul li:before {
+    content: '✓';
+    color: darkorange;
+    font-weight: bolder;
+    padding-right: 10px;
+  }
+}
+
+// Footer Fourth Part
+.footerFour{
+  display: flex;
+  text-align: left;
+  .footerFourHeadline{
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:838px){
+  .footerFour{
+    display: block;
+    text-align: center;
+    .footerFourHeadline{
+      padding-left: 0px;
+      padding-top: 10px;
+    }
+  }
+}
