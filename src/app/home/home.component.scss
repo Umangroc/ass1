@@ -12,6 +12,17 @@
   display: inline-flex;
   justify-content: left;
   padding-left: 60px;
+
+  .header-icon{
+    margin-top: 17px;
+    margin-left: 20px;
+  }
+
+  .header-text{
+    margin-left: 15px;
+    margin-top: 17px;
+    margin-right: 15px;
+  }
 }
 
 @media (max-width: 699px){
@@ -33,6 +44,12 @@
   display: inline-flex;
   place-content: flex-end;
   padding-right: 50px;
+
+  .icon-style{
+    padding-left: 20px;
+    margin-top: 17px;
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: 991px){
@@ -70,18 +87,48 @@
 }
 
 // Nav Item Placement
-.navlist{
-  place-content: flex-end;
-  font-size: 20px;
+.navbar{
+  justify-content: center;
+  align-items: center;
+
+  .logo{
+    color: #fcba03;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .navlist{
+    place-content: flex-end;
+    font-size: 20px;
+
+    .active{
+      color: #fcba03;
+      padding: 10px;
+      background-color: white;
+    }
+
+    .inactive{
+      color: black;
+      opacity: 0.8;
+      padding: 10px;
+    }
+  }
 }
 
+
 @media (max-width: 991px){
-  .navlist{
-    place-content: center;
+  .navbar{
+    .navlist{
+      place-content: center;
+    }
   }
 }
 
 // Hero Component
+.hero-image{
+  height: 600px;
+}
 .content {//Box with content
   position: absolute; /* Position the background text */
   bottom: 25%; /* At the bottom. Use top:0 to append it to the top */
@@ -90,21 +137,118 @@
   color: #f1f1f1; /* Grey text */
   width: 96%; /* Full width */
   max-width: 400px;
-}
 
-.title {//Upper Box Darkness
-  background-color: rgba(0,0,0,0.5);
+  .title {//Upper Box Darkness
+    background-color: rgba(0,0,0,0.5);
+  
+    .title-text{
+      padding: 20px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .content-divider{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 2px;
+    background: #fcba03;
+  }
+
+  .content-text{
+    padding: 20px;
+  }
+
+  .hero-button{
+    border-color: white;
+    width: 200px;
+    border-radius: 30px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 // Cost of Renovation
-.centre {
+.renovation{
   text-align: center;
+  align-items: center;
+  padding: 10px;
+
+  .image{
+    height: 100px;
+  }
+
+  .centre {
+    text-align: center;
+
+    .renovation-heading{
+      padding-bottom: 5px;
+    }
+  }
+
+  .renovation-button{
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 @media (min-width: 768px){
-  .centre {
-    text-align: left;
+  .renovation{
+    .centre {
+      text-align: left;
+    }
+  }
 }
+
+// Services
+.services-underline{
+  height: 1.5px;
+  background: #fcba03;
+  width: 8%;
+}
+
+.services-text{
+  width: 65%;
+  margin: auto;
+}
+
+.services-box{
+  padding: 15px;
+  padding-top: 0;
+
+  .subheading-underline{
+    height: 1px;
+    width: 10%;
+    background: #fcba03;
+  }
+
+  .subheading-text{
+    padding: 15px;
+  }
+}
+
+.service-button{
+  color: white;
+  border-radius: 50px;
+  font-weight: 500;
+  padding: 12px 25px;
+  margin-top: 25px;
+}
+
+// Recent Projects
+.projects-underline{
+  background: #fcba03;
+  height: 1.5px;
+  width: 6%;
+}
+
+.projects-text{
+  width: 60%;
+  margin: auto;
+  text-align: center;
 }
 
 // Explore and Button
@@ -114,8 +258,12 @@
   padding: 20px;
   align-items: center;
   
-  h4{
-    padding-right: 15px;
+  .heading{
+    margin-top: 10px;
+
+    h4{
+      padding-right: 15px;
+    }
   }
 
   button{
@@ -132,10 +280,12 @@
     display:block;
     text-align: center;
 
-    h4{
-      padding-right: 0px;
+    .heading{
+      h4{
+        padding-right: 0px;
+      }
     }
-  
+    
     button{
       margin-left: 0px;
       margin-top: 20px;
@@ -144,14 +294,55 @@
 }
 
 // About Us
-.aboutImg{
-  height: 470px;
-  width: 80%;
+.about-underline{
+  background: #fcba03;
+  height: 1.5px;
+  width: 6%;
+}
+
+.about-text{
+  width: 57%;
+  margin: auto;
+  text-align: center;
+}
+
+.about-left-side{
+  text-align: center;
+  padding-top: 30px;
+
+  .aboutImg{
+    height: 470px;
+    width: 80%;
+  }
 }
 
 @media (max-width: 425px){
-  .aboutImg{
-    height: 300px;
+  .about-left-side{
+    .aboutImg{
+      height: 300px;
+    }
+  }  
+}
+
+.about-right-side{
+  padding: 25px;
+  margin-top: 30px;
+
+  .about-right-row{
+    display: flex;
+
+    .img-height{
+      height: 100px;
+    }
+
+    .content-box{
+      margin-left: 25px;
+
+      .content-text{
+        padding-top: 10px;
+      }
+    }
+
   }
 }
 
@@ -168,20 +359,130 @@
 }
 }
 
+// Offer
+.offer-box{
+  padding: 4.25rem;
+
+  .offer-img{
+    width: 200px;
+  }
+
+  .offer-heading{
+    color: black;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 400;
+    margin-left: -8px;
+    margin-top: 15px;
+  }
+
+  .offer-underline{
+    background: #fcba03;
+    height: 1.5px;
+    width: 50px;
+  }
+}
+
+// Why renovate
+.renovate-heading{
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.renovate-underline{
+  background: #fcba03;
+  height: 1.5px;
+  width: 7%;
+}
+
+.renovate-text{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.renovate-box{
+  justify-content: center;
+  padding: 40px;
+
+  .renovate-img{
+    width: 200px; 
+  }
+
+  .renovate-subheading-underline{
+    background: #fcba03;
+    height: 1px;
+    width: 10%;
+  }
+}
+
+// Slideshow
+.mySlides {/* Hide the images by default */
+  display: table-cell;
+  }
+
 // Slideshow Image for Mobile
 .slideImg{
-width: 100%;
+  width: 100%;
+  }
+
+  @media (max-width: 425px){
+    .slideImg {
+      height: 250px;
+    }
+  }
+
+.slid {/* Dark Background*/
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
 }
 
-@media (max-width: 425px){
-  .slideImg {
-    height: 250px;
-}
+.text{ //Inside Text Content
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 15%;
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  font-size: 22px;
+  }
+  
+  @media (max-width:768px){
+      .text{
+        font-size: 10px;
+      }
+  }
+
+.slideLine{//Divider Line between Text
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 6%;
+  background: #fcba03;
+  }
+  
+  @media (max-width:768px){
+    .slideLine{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      }
+  }
+
+// Slideshow Content Last Two Lines
+.subtitle{
+  font-size: 16px;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: table-cell;
+@media (max-width:768px){
+  .subtitle{
+    font-size: 8px;
+  }
 }
 
 /* Next & previous buttons */
@@ -211,23 +512,32 @@ width: 100%;
   background-color: rgba(0,0,0,0.8);
 }
 
-// Unknown
-.subtitle{
-  font-size: 16px;
-}
-
-@media (max-width:768px){
-  .subtitle{
-    font-size: 8px;
-  }
-}
-
-
 // We work with
-.dotImg{
-  padding: 15px 15px;
-  width: 225px;
-  height: 150px;
+.work-heading{
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.work-underline{
+  height: 2px;
+  margin-top: 30px;
+  width: 6%;
+  background: #fcba03;
+}
+
+.work-box{
+  text-align: center;
+  height: 100%;
+
+  .carouse{
+    display: inline-flex;
+
+    .dotImg{
+      padding: 15px 15px;
+      width: 225px;
+      height: 150px;
+    }
+  }
 }
 
 .dot {/* The dots/bullets/indicators */
@@ -245,52 +555,46 @@ width: 100%;
   background-color: #fcba03;
 }
 
-// Slideshow
-.carouse{
-  display: inline-flex;
-}
+// Contact
+.contact-col{
+  padding: 15px;
 
-.slid {/* Dark Background*/
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
-  height: 100%;
-  left: 0%;
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-}
-
-.text{ //Inside Text Content
-  color: #f2f2f2;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 15%;
-  width: 80%;
-  left: 10%;
-  text-align: center;
-  font-size: 22px;
-}
-
-@media (max-width:768px){
-    .text{
-      font-size: 10px;
-    }
-}
-
-.slideLine{//Divider Line between Text
-  height: 1px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  .contact-img{
+    height: 100px;
   }
-  
-  @media (max-width:768px){
-    .slideLine{
-      margin-top: 10px;
-      margin-bottom: 10px;
-      }
+
+  .contact-text{
+    padding: 10px;
   }
+}
+
+// Footer
+.divider-lines{
+  display: flex;
+
+  .first{
+    height: 2px;
+    background: #fcba03;
+    width: 20%;
+  }
+  .second{
+    width: 80%;
+    background: #b3b1b1;
+  }
+}
+
+// Footer First Part
+.footer-icon{
+  padding:20px;
+  background-color: #fcba03;
+  border: solid;
+  border-color: white;
+  border-width: 0.5px;
+}
+
 
 // Footer Second Part
-.footer{//   Bullet Point
+.footer{//Bullet Point
 
   ul {
     list-style: none;
@@ -308,8 +612,19 @@ width: 100%;
 .footerFour{
   display: flex;
   text-align: left;
+
+  .footer-img{
+    height: 100px;
+    width: 100px;
+  }
+
   .footerFourHeadline{
     padding-left: 15px;
+
+    .date{
+      font-size: 10px;
+      padding-top: 10px;
+    }
   }
 }
 
@@ -322,4 +637,11 @@ width: 100%;
       padding-top: 10px;
     }
   }
+}
+
+// Copyright
+.copyright{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 14px;
 }
